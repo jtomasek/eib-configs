@@ -1,0 +1,16 @@
+elemental:
+  registration:
+    url: https://rancher-192.168.122.70.sslip.io/elemental/registration/pbrdd66kt4v8xkk7zkc8mcb9chrn2g5jzsvchvj57snp68cggtknm6
+    ca-cert: |-
+      -----BEGIN CERTIFICATE-----
+      MIIBvTCCAWOgAwIBAgIBADAKBggqhkjOPQQDAjBGMRwwGgYDVQQKExNkeW5hbWlj
+      bGlzdGVuZXItb3JnMSYwJAYDVQQDDB1keW5hbWljbGlzdGVuZXItY2FAMTcyMTg5
+      ODM2MDAeFw0yNDA3MjUwOTA2MDBaFw0zNDA3MjMwOTA2MDBaMEYxHDAaBgNVBAoT
+      E2R5bmFtaWNsaXN0ZW5lci1vcmcxJjAkBgNVBAMMHWR5bmFtaWNsaXN0ZW5lci1j
+      YUAxNzIxODk4MzYwMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEh7c0zKI8fZhD
+      6577/2nz2z2ZRVPLMx6G9m8dIYxjnl0yUB894kNPrjY+nJeLRjhtTAq7qkK/F5l+
+      cJf68XGZd6NCMEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYD
+      VR0OBBYEFIdVXv1/ND+UAmUwjiSU4Yo0rDGXMAoGCCqGSM49BAMCA0gAMEUCIQC+
+      TuhVY8tQ6isK1Ag1p2OznCL9EYiDHxqExEFjXhdCzwIgbjEOhkTNq6gyuibR7O+c
+      k0b7JCFZ5za73Osc3m9+l+o=
+      -----END CERTIFICATE-----

@@ -1,0 +1,6 @@
+edu/
+**/base-images/*
+_build/
+*.iso
+.subscription
+ov.cose
