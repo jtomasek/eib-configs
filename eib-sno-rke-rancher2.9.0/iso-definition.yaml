@@ -135,7 +135,7 @@ kubernetes:
   #   type: server
   # - hostname: host3rke2.example.com
   #   type: server
-  version: v1.29.8-rc2+rke2r1
+  version: v1.30.2+rke2r1
 operatingSystem:
   isoConfiguration:
     installDevice: /dev/sda
