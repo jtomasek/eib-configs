@@ -14,7 +14,7 @@ interfaces:
 - name: eth0
   type: ethernet
   state: up
-  mac-address: aa:aa:aa:aa:aa:31
+  mac-address: aa:aa:aa:aa:aa:41
   ipv4:
     address:
     - ip: 192.168.122.80

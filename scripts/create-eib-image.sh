@@ -9,9 +9,8 @@ if [ $1 == "mgmt" ];then
            registry.suse.com/edge/edge-image-builder:1.0.2 \
            build --definition-file iso-definition.yaml
 elif [ $1 == "slm60" ];then
-	# mgmt cluster
 	sudo podman run --rm --privileged -it -v ./eib-sno-rke-rancher2.9.0:/eib \
-           registry.suse.com/edge/edge-image-builder:1.0.2 \
+           localhost/eib:dev \
            build --definition-file iso-definition.yaml
 elif [ $1 == "elemental-node" ];then
 	# edge cluster

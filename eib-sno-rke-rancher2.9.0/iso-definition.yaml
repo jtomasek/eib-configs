@@ -135,7 +135,7 @@ kubernetes:
   #   type: server
   # - hostname: host3rke2.example.com
   #   type: server
-  version: v1.28.8+rke2r1
+  version: v1.29.8-rc2+rke2r1
 operatingSystem:
   isoConfiguration:
     installDevice: /dev/sda
@@ -146,7 +146,7 @@ operatingSystem:
     sccRegistrationCode: <scc-reg-code>
   systemd:
     disable:
-    - haveged.service
+    # - haveged.service
     - rebootmgr.service
     - transactional-update.timer
     - transactional-update-cleanup.timer
@@ -154,7 +154,7 @@ operatingSystem:
     - qemu-guest-agent
   users:
   - username: root
-    encryptedPassword: $6$qEws.pYuhPo5tCzd$XWGRxKLXgYj2V0HRsbVhAppU.sC7jarnSlrtabjtiF9N3vFwdcnOAkru7NQN6E4eGFDwN0IAVrYQsStgk7lX.1
+    encryptedPassword: $6$P1DZDA/PO6kkJUsp$lI/elMbLuF0VHHV4nozJrHJGYcWWwATo41mrz2AMDoqKkJwRWr8e5CPfX//CXp96kX450PqNNZnfivvkuu6EP1
     createHomeDir: true
     sshKeys:
-    - ssh-rsa ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJXhg8EIOaLthhtDCighL7sDuLsL9aPw3KPmpNQiW6Dq jiri.tomasek@suse.com
+    - ssh-rsa ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJdQwalhNX1CtHCS+BJCCTBSUQPUMn+OZX9G2ACi2hzm jiri.tomasek@suse.com
