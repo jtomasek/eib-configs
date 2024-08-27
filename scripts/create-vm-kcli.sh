@@ -8,7 +8,7 @@ source ~/.bashrc
 # kcli create vm -P iso=jtomasek-eib-sno-rke-rancher-cluster.iso -P pool=VMs -P memory=32768 -P numcpus=8 -P disks=['{"size": 20, "interface": "sata"}'] -P nets=['{"name": "default", "mac": "aa:aa:aa:aa:aa:31"}]' jtomasek-mgmt-sno
 
 # rancher2..9.0 mgmt cluster machine
-kcli create vm -P iso=jtomasek-slm6.0-rke-rancher2.9.0-cluster.iso -P pool=VMs -P memory=32768 -P numcpus=8 -P disks=['{"size": 20, "interface": "sata"}'] -P nets=['{"name": "default", "mac": "aa:aa:aa:aa:aa:41"}]' jtomasek-mgmt-rancher2.9.0
+kcli create vm -P iso=jtomasek-slm6.0-rke-rancher2.9.0-cluster.iso -P pool=VMs -P memory=32768 -P numcpus=8 -P disks=['{"size": 40, "interface": "sata"}'] -P nets=['{"name": "default", "mac": "aa:aa:aa:aa:aa:41"}]' jtomasek-mgmt-rancher2.9.0
 
 # fedora40
 # curl -L https://download.fedoraproject.org/pub/fedora/linux/releases/40/Cloud/x86_64/images/Fedora-Cloud-Base-Generic.x86_64-40-1.14.qcow2 > ../VMs/fedora40.qcow2
