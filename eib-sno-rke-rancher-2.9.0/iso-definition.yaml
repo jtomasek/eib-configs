@@ -3,7 +3,7 @@ image:
   arch: x86_64
   baseImage: SL-Micro.x86_64-6.0-Default-SelfInstall-GM.install.iso
   imageType: iso
-  outputImageName: jtomasek-slm6.0-rke-rancher2.9.0-cluster.iso
+  outputImageName: jtomasek-slm6.0-rke-rancher2.9.2-cluster.iso
 kubernetes:
   helm:
     charts:
@@ -14,18 +14,6 @@ kubernetes:
       valuesFile: certmanager.yaml
       createNamespace: true
       installationNamespace: kube-system
-    # - name: ui-plugin-operator-crd
-    #   repositoryName: rancher-charts
-    #   version: 103.0.2+up0.2.1
-    #   targetNamespace: cattle-ui-plugin-system
-    #   createNamespace: true
-    #   installationNamespace: kube-system
-    # - name: ui-plugin-operator
-    #   repositoryName: rancher-charts
-    #   version: 103.0.2+up0.2.1
-    #   targetNamespace: cattle-ui-plugin-system
-    #   createNamespace: true
-    #   installationNamespace: kube-system
     # - name: cdi-chart
     #   repositoryName: suse-edge-charts
     #   version: 0.2.3
@@ -91,8 +79,8 @@ kubernetes:
     #   installationNamespace: kube-system
     #   valuesFile: rancher.yaml
     - name: rancher
-      version: 2.9.0
-      repositoryName: rancher-latest
+      version: 2.9.2
+      repositoryName: rancher-repo
       targetNamespace: cattle-system
       createNamespace: true
       installationNamespace: kube-system
@@ -118,7 +106,7 @@ kubernetes:
     #   url: oci://registry.suse.com/edge
     # - name: rancher-prime
     #   url: https://charts.rancher.com/server-charts/prime
-    - name: rancher-latest
+    - name: rancher-repo
       url: https://releases.rancher.com/server-charts/latest
     # - name: rancher-ui-plugins
     #   url: https://github.com/rancher/ui-plugin-charts/raw/main/
@@ -143,6 +131,7 @@ operatingSystem:
     packageList:
     - jq
     - qemu-guest-agent
+    - openssh-server-config-rootlogin
     sccRegistrationCode: <scc-reg-code>
   systemd:
     disable:
@@ -157,4 +146,4 @@ operatingSystem:
     encryptedPassword: $6$P1DZDA/PO6kkJUsp$lI/elMbLuF0VHHV4nozJrHJGYcWWwATo41mrz2AMDoqKkJwRWr8e5CPfX//CXp96kX450PqNNZnfivvkuu6EP1
     createHomeDir: true
     sshKeys:
-    - ssh-rsa ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJdQwalhNX1CtHCS+BJCCTBSUQPUMn+OZX9G2ACi2hzm jiri.tomasek@suse.com
+    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJdQwalhNX1CtHCS+BJCCTBSUQPUMn+OZX9G2ACi2hzm jiri.tomasek@suse.com

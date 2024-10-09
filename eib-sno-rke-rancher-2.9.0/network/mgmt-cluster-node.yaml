@@ -14,10 +14,10 @@ interfaces:
 - name: eth0
   type: ethernet
   state: up
-  mac-address: aa:aa:aa:aa:aa:41
+  mac-address: aa:aa:aa:aa:aa:32
   ipv4:
     address:
-    - ip: 192.168.122.80
+    - ip: 192.168.122.70
       prefix-length: 24
     dhcp: false
     enabled: true

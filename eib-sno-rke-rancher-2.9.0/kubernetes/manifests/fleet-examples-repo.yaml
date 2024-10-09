@@ -9,5 +9,4 @@ spec:
   branch: main
   paths:
   - fleets/day2/chart-templates/elemental
-  - fleets/general/rancher-ui-plugin-operator
   - fleets/general/elemental/rancher-ui-plugin-elemental # The Elemental UI plugin is not available through OCI
