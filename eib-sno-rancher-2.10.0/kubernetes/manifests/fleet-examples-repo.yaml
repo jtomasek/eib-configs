@@ -1,0 +1,12 @@
+# Deploys Fleet GitRepo based on fleet-examples repository, installs elemental and enables rancher-ui-plugins
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: elemental
+  namespace: fleet-local
+spec:
+  repo: https://github.com/suse-edge/fleet-examples.git
+  branch: main
+  paths:
+  - fleets/day2/chart-templates/elemental
+  - fleets/general/elemental/rancher-ui-plugin-elemental # The Elemental UI plugin is not available through OCI
