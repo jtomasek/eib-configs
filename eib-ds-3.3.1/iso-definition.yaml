@@ -1,0 +1,42 @@
+apiVersion: 1.1
+image:
+  arch: x86_64
+  baseImage: SL-Micro.x86_64-6.1-Default-SelfInstall-GM.install.iso
+  imageType: iso
+  outputImageName: edge-ds-3.3.1.iso
+kubernetes:
+  helm:
+    charts:
+    - name: cert-manager
+      repositoryName: jetstack
+      version: 1.14.2
+      targetNamespace: cert-manager
+      valuesFile: certmanager.yaml
+      createNamespace: true
+      installationNamespace: kube-system
+    repositories:
+    - name: jetstack
+      url: https://charts.jetstack.io
+  version: v1.32.4+rke2r1
+operatingSystem:
+  isoConfiguration:
+    installDevice: /dev/sda
+  packages:
+    packageList:
+    - jq
+    - qemu-guest-agent
+    - openssh-server-config-rootlogin
+    sccRegistrationCode: <scc-reg-code>
+  systemd:
+    disable:
+    - rebootmgr.service
+    - transactional-update.timer
+    - transactional-update-cleanup.timer
+    enable:
+    - qemu-guest-agent
+  users:
+  - username: root
+    encryptedPassword: $6$P1DZDA/PO6kkJUsp$lI/elMbLuF0VHHV4nozJrHJGYcWWwATo41mrz2AMDoqKkJwRWr8e5CPfX//CXp96kX450PqNNZnfivvkuu6EP1
+    createHomeDir: true
+    sshKeys:
+    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJXhg8EIOaLthhtDCighL7sDuLsL9aPw3KPmpNQiW6Dq jiri.tomasek@suse.com

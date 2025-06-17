@@ -24,13 +24,13 @@ fi
 
 echo Building image from $1
 
-sudo podman run --rm --privileged -it -v $1:/eib \
-	registry.opensuse.org/isv/suse/edge/factory/test_manifest_images/edge-image-builder:1.2.0-rc1 \
-	build --definition-file iso-definition.yaml
-
 # sudo podman run --rm --privileged -it -v $1:/eib \
-# 	registry.suse.com/edge/3.1/edge-image-builder:1.1.0
+# 	registry.opensuse.org/isv/suse/edge/factory/test_manifest_images/edge-image-builder:1.2.0-rc1 \
 # 	build --definition-file iso-definition.yaml
+
+sudo podman run --rm --privileged -it -v $1:/eib \
+	registry.suse.com/edge/3.3/edge-image-builder:1.2.1 \
+	build --definition-file iso-definition.yaml
 
 	# registry.opensuse.org/isv/suse/edge/factory/test_manifest_images/edge-image-builder:1.2.0-rc1 \
 
